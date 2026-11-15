@@ -1,0 +1,4 @@
+http://finelineprojects.site/* https://finelineprojects.site/:splat 301
+http://www.finelineprojects.site/* https://finelineprojects.site/:splat 301
+https://www.finelineprojects.site/* https://finelineprojects.site/:splat 301
+/index.html / 301

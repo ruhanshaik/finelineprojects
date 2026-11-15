@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#263C32">
+    <meta name="description" content="The requested page could not be found. Return to Fine Line Projects for architecture, interior design and construction services in Ballari.">
+    <title>Page Not Found | Fine Line Projects</title>
+    <link rel="icon" href="/assets/favicon.ico" sizes="any">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/pages.css">
+    <style>
+        /* High-End Animation & Mobile-Friendly Enhancements */
+        :root {
+            --primary-color: #263C32;
+            --accent-color: #4A6B5D;
+            --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            font-family: inherit;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s ease;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        .legal-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f7f9f8 0%, #edf2f0 100%);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .page-hero {
+            width: 100%;
+            max-width: 700px;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Initial state for entrance animations */
+        .hero-subtitle,
+        .page-hero-title,
+        .page-hero-desc,
+        .nav-links-wrapper {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity 0.8s var(--transition-smooth), transform 0.8s var(--transition-smooth);
+        }
+
+        .hero-subtitle.animate-in,
+        .page-hero-title.animate-in,
+        .page-hero-desc.animate-in,
+        .nav-links-wrapper.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-subtitle {
+            display: inline-block;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 16px;
+            background: rgba(38, 60, 50, 0.08);
+            padding: 6px 14px;
+            border-radius: 50px;
+        }
+
+        .page-hero-title {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            color: var(--primary-color);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            transition-delay: 0.15s;
+        }
+
+        .page-hero-desc {
+            font-size: clamp(0.95rem, 2vw, 1.15rem);
+            color: #55655e;
+            max-width: 500px;
+            line-height: 1.6;
+            margin-bottom: 36px;
+            transition-delay: 0.3s;
+        }
+
+        /* Navigation Buttons */
+        .nav-links-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            transition-delay: 0.45s;
+        }
+
+        .btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.3s var(--transition-smooth), box-shadow 0.3s var(--transition-smooth), background-color 0.3s ease, color 0.3s ease;
+            box-shadow: 0 4px 12px rgba(38, 60, 50, 0.08);
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(38, 60, 50, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+        }
+
+        /* Mobile Responsiveness Improvements */
+        @media (max-width: 480px) {
+            .legal-page {
+                padding: 16px;
+            }
+            .page-hero {
+                padding: 20px 10px;
+            }
+            .nav-links-wrapper {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .btn {
+                width: 100%;
+                padding: 14px 20px;
+            }
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <main id="main-content" class="legal-page">
+        <section class="page-hero">
+            <div class="container">
+                <span class="hero-subtitle">404 · PAGE NOT FOUND</span>
+                <h1 class="page-hero-title">This page could not be found.</h1>
+                <p class="page-hero-desc">The page may have moved or the address may be incorrect. Find your way back to Fine Line Projects.</p>
+                <nav class="nav-links-wrapper" aria-label="Helpful pages">
+                    <a class="btn btn-primary" href="/">Home</a>
+                    <a class="btn btn-primary" href="/services.html">Services</a>
+                    <a class="btn btn-primary" href="/contact.html">Contact</a>
+                </nav>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Trigger high-end entrance animations smoothly once the DOM loads
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll('.hero-subtitle, .page-hero-title, .page-hero-desc, .nav-links-wrapper');
+            requestAnimationFrame(() => {
+                elements.forEach(el => el.classList.add('animate-in'));
+            });
+        });
+    </script>
+</body>
+</html>
