@@ -32,15 +32,14 @@ function initTheme() {
         }
     }
 
-    // Check local storage or system preference
+    // Keep an explicit saved choice; otherwise start in light mode.
     let savedTheme = null;
     try {
         savedTheme = window.localStorage.getItem('theme');
     } catch (error) {
         console.warn('Unable to read the saved theme preference.', error);
     }
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    applyTheme(savedTheme === 'dark' || (!savedTheme && systemPrefersDark) ? 'dark' : 'light');
+    applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
 
     // Toggle click handler
     if (themeToggleBtn) {
